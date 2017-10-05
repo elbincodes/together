@@ -1,0 +1,8 @@
+<h1>All Players</h1>
+
+<% @players.each do |player| %>
+NAME: <%= player.name %>
+NUMBER: <%= player.number %>
+POSITION: <%= player.position %>
+TEAM NAME: <%= player.team.name %>
+<% end %>

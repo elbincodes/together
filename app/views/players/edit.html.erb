@@ -1,0 +1,24 @@
+<h1>Please Edit a player</h1>
+
+<%= form_for @player do |f| %>
+<%= f.label :name  %>
+<%= f.text_field :name  %>
+
+<%= f.hidden_field :number %>
+<%= f.label :position %>
+<%= f.text_field :position %>
+<%= f.label :teamsss  %>
+
+<%= f.collection_select :team_id, Team.all, :id, :name  %>
+<%= f.submit "Thank you for editing"  %>
+<br>
+<br>
+<br>
+<% end %>
+
+<%= link_to "Delete", @player, method: :delete  %>
+
+<!-- <%= form_for @player, method: :delete do |f| %>
+<%= f.submit %>
+
+<% end %> -->

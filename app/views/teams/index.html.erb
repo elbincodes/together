@@ -1,0 +1,21 @@
+<h1>Teams</h1>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+
+<% @teams.each do |team| %>
+Name:<%= team.name %>
+Color: <%= team.color %>
+Sport: <%= team.sport %>
+<br>
+players:
+<% team.players.each do |player| %>
+<br>
+<%= player.name %>
+<% end %>
+<% end %>

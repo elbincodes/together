@@ -1,0 +1,15 @@
+<h1>Please create a player</h1>
+
+<%= form_for @player do |f| %>
+<%= f.label :name  %>
+<%= f.text_field :name  %>
+<%= f.label :number  %>
+<%= f.text_field :number %>
+<%= f.label :position %>
+<%= f.text_field :position %>
+<%= f.label :teamsss  %>
+
+<%= f.collection_select :team_id, Team.all, :id, :name  %>
+<%= f.submit "Welcome to the Team" %>
+
+<% end %>
